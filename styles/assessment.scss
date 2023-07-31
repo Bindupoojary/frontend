@@ -1,0 +1,168 @@
+@use './colorss' as *;
+
+.assessment{
+  padding:70px 55px ;
+  background-color: $background;
+  display: flex;
+  flex-wrap: wrap;
+  gap:12%;
+
+  @media only screen and (max-width:376px) {
+    padding: 3%;
+
+  }
+
+  &-card{
+    width:44%;
+    height: 300px;
+    margin-bottom: 50px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media only screen and (max-width:376px) {
+      width:100%;
+
+    }
+
+    &:hover .assessment-wrapper{
+      height: 300px;
+      margin: 0;
+      transition: height .5s;
+      bottom: 0px;
+      width: 100%;
+      left: 0;
+      padding: 3px;
+    }
+
+    &:hover .assessment-desc{
+      display: block;
+      color: $white;
+      padding-left: 20px;
+    }
+
+    &:hover .assessment-title .fa-solid{
+      display: none;
+    }
+
+    &:hover .assessment-title{
+      font-size: 24px;
+	    margin-bottom: 8px;
+      padding-left: 20px;
+    }
+
+    &:hover .assessment-continue{
+      display: block;
+    }
+
+    &:first-child{
+      background-image: url("/asse1.jpeg");
+
+    }
+
+    &:nth-child(2){
+      background-image: url("/aseesscard2.jpeg");
+    }
+
+    &:nth-child(3){
+      background-image: url("/assesscard3.jpeg");
+    }
+
+      &:nth-child(4){
+      background-image: url("/assesscard4.jpeg");
+    }
+  }
+
+  &-wrapper{
+    background-color: $card-bg;
+    position: absolute;
+    bottom: 5px;
+    width: 93%;
+    left: 3%;
+    padding: 3px;
+
+    @media only screen and (max-width:376px) {
+      width:100%;
+      left: 0;
+      padding: 0;
+      bottom: 0;
+
+    }
+  }
+
+
+  &-title{
+    color: $white;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-Bottom: 8px;
+    font-weight: bold;
+
+    &-mobile{
+      display: none;
+
+      @media only screen and (max-width:376px) {
+        display: block;
+        color:$white;
+        font-size: 14px;
+        margin-top: 8px;
+        margin-Bottom: 8px;
+        font-weight: bold;
+        padding-left: 2%;
+      }
+    }
+
+      @media only screen and (max-width:376px) {
+      display: none;
+      }
+  }
+
+    &-desc{
+      display: none;
+
+      @media only screen and (max-width:376px) {
+      display: none;
+      }
+
+    &-mobile{
+      display: none;
+
+        @media only screen and (max-width:376px) {
+          display: block;
+          color: $white;
+          font-size: 14px;
+          font-weight: bold;
+          padding:0 0 4% 2%;
+        }
+    }
+
+  }
+
+    &-continue{
+      background-color: $continue;
+      color:$white;
+      display: none;
+      position: absolute;
+      bottom: 0;
+      width: 92%;
+      left: 0;
+      text-align: right;
+      padding: 20px 8% 20px 0;
+
+      @media only screen and (max-width:376px) {
+        color: $white;
+        position: static;
+        display: block;
+      }
+    }
+}
+
+.fa-solid{
+  text-align: right;
+  position: absolute;
+  right: 0;
+}
+
+.continue{
+  padding-right: 2%;
+}
